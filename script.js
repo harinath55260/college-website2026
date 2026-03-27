@@ -9,10 +9,6 @@ p.style.display = "none";
 document.getElementById(page).style.display = "block";
 
 }
-// Default home page show
-document.addEventListener("DOMContentLoaded", function(){
-    showPage("home");
-});
 
 
 // FORM SUBMIT
@@ -49,3 +45,71 @@ alert("Student Registered Successfully!");
 
 });
 });
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+function showSlide() {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+
+    index++;
+    if (index >= slides.length) {
+        index = 0;
+    }
+}
+
+setInterval(showSlide, 4000);
+
+function showDept(dept) {
+
+let data = {
+    cs: [
+        {name: "Mahesh Sir(HOD)", pdf: "pdfs/computers 6 Mahesh.pdf"},
+        {name: "Rajanikanth Sir", pdf: "pdfs/profile rajanikanth.pdf"},
+         {name: "kavitha medam", pdf: "pdfs/computers 4 Kavitha.pdf"},
+        {name: "Devendra nayak Sir", pdf: "pdfs/devendra.pdf"},
+        {name: "Megha vardhan Sir", pdf: "pdfs/megha.pdf"},
+        {name: "Krishna hasan Sir", pdf: "pdfs/computers 5 Krishna hasan.pdf"},
+        {name: "Moulali Sir", pdf: "pdfs/computers 7 moulali.pdf"},
+        {name: "Swethann Sir", pdf: "pdfs/computers 10 swethan.pdf"} ,
+        {name: "Teja Sir", pdf: "pdfs/computers 11 teja.pdf"},
+    
+    ],
+    commerce: [
+        {name: "Anitha Madam", pdf: "pdfs/anitha.pdf"}
+    ],
+    physics: [
+        {name: "Ravi Sir", pdf: "pdfs/ravi.pdf"}
+    ],
+    chemistry: [
+        {name: "Lakshmi Madam", pdf: "pdfs/lakshmi.pdf"}
+    ],
+    maths: [
+        {name: "Kiran Sir", pdf: "pdfs/kiran.pdf"}
+    ]
+};
+
+let facultyDiv = document.getElementById("facultyList");
+facultyDiv.innerHTML = "<h3>Faculty Members</h3>";
+
+data[dept].forEach(fac => {
+    facultyDiv.innerHTML += `
+        <p>
+            <a href="${fac.pdf}" target="_blank">
+                ${fac.name}
+            </a>
+        </p>
+    `;
+});
+
+}
+
+
+
+
+
+
+
+
+
+
