@@ -106,7 +106,10 @@ data[dept].forEach(fac => {
 document.addEventListener("DOMContentLoaded", function(){
     showPage("home");
 });
-
+function toggleMenu(){
+    let nav = document.getElementById("navbar");
+    nav.classList.toggle("active");
+}
 
 
 
