@@ -103,7 +103,9 @@ data[dept].forEach(fac => {
 });
 
 }
-
+document.addEventListener("DOMContentLoaded", function(){
+    showPage("home");
+});
 
 
 
