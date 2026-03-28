@@ -220,5 +220,140 @@ table {
     width: 100%;
     height: auto;
 }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
+body{
+    width:100%;
+    overflow-x:hidden;
+}
 
+/* Images mobile ki correct ga fit avvadam */
+img{
+    max-width:100%;
+    height:auto;
+}
+
+/* Sections full width */
+section{
+    width:100%;
+    padding:10px;
+}
+
+/* Header responsive */
+.header{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* Navigation mobile lo */
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+nav a{
+    padding:10px;
+    font-size:14px;
+}
+
+/* Mobile view special */
+@media(max-width:768px){
+
+    .header{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .logo-left,
+    .logo-right{
+        width:60px;
+    }
+
+    h1{
+        font-size:18px;
+    }
+
+    h3{
+        font-size:14px;
+    }
+
+    .info-box{
+        width:100%;
+    }
+
+    .sports-gallery img{
+        width:100%;
+    }
+}
+.info-box{
+    margin:10px;
+    padding:10px;
+    border-radius:10px;
+}
+.slide{
+    width:100%;
+    height:auto;
+}
+.header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:#1e3a8a;
+    color:white;
+    padding:10px;
+}
+
+/* Logos */
+.logo-left img,
+.logo-right img{
+    width:60px;
+    height:auto;
+}
+
+/* Title */
+.header-title{
+    text-align:center;
+    flex:1;
+}
+
+.header-title h2{
+    font-size:20px;
+    margin:0;
+}
+
+.header-title p{
+    font-size:14px;
+    margin:0;
+}
+
+/* Mobile responsive */
+@media(max-width:768px){
+
+    .header{
+        flex-direction:row;
+        padding:8px;
+    }
+
+    .logo-left img,
+    .logo-right img{
+        width:40px;
+    }
+
+    .header-title h2{
+        font-size:14px;
+    }
+
+    .header-title p{
+        font-size:10px;
+    }
+}
+.header{
+    gap:10px;
+}
