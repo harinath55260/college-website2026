@@ -166,7 +166,6 @@ body {
 .sports-gallery img:hover {
     transform: scale(1.05);
 }
-
 /* HEADER FLEX */
 .header {
     display: flex;
@@ -221,12 +220,5 @@ table {
     width: 100%;
     height: auto;
 }
-
-
-
-
-
-
-
 
 
