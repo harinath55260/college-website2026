@@ -167,6 +167,63 @@ body {
     transform: scale(1.05);
 }
 
+/* HEADER FLEX */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* NAV */
+nav a {
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* IMAGES */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        padding: 8px;
+    }
+
+    table, tr, td {
+        display: block;
+        width: 100%;
+    }
+
+    input, select {
+        width: 100%;
+        margin: 5px 0;
+        padding: 8px;
+    }
+
+}
+.img {
+    width: 100%;
+    height: auto;
+}
+
+
+
 
 
 
